@@ -1,6 +1,15 @@
 @font-face {
   font-family: customize-font;
+  font-weight: 400;
+  font-style: normal;
   src: url(./assets/vazir-font-v16.1.0/Vazir.ttf);
+}
+
+@font-face {
+  font-family: bold-customize-font;
+  font-weight: 950;
+  font-style: normal;
+  src: url(./assets/BYekan/BYekan+\ Bold.ttf) format("ttf");
 }
 
 *,
@@ -14,7 +23,10 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: white;
+  /* background-image: url(./assets/images/gallery-4.jpg); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 }
 li {
   list-style: none;
@@ -108,7 +120,6 @@ a {
 
 .hero-container {
   display: grid;
-  position: relative;
   height: 100vh;
   grid-template-rows: 1fr 0.5fr;
   grid-template-columns: 0.5fr 1fr;
@@ -121,7 +132,7 @@ a {
 
 .image-banner {
   padding: 7rem 5rem;
-  width: auto;
+  width: 150%;
 }
 
 .article {
@@ -130,16 +141,17 @@ a {
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
-  padding-right: 19rem;
+  padding: 5rem 19rem 0rem 11rem;
 }
 
 .cards {
   display: flex;
+  z-index: 10;
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
-  margin-bottom: 1px;
-  height: 27rem;
+  height: 24rem;
+  margin-right: -19rem;
 }
 
 .card {
@@ -147,11 +159,11 @@ a {
   border-radius: 20px;
   box-shadow: 0 0 35px gray;
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 14rem;
+  background-color: #fff;
 }
 
 .card-image {
@@ -170,8 +182,6 @@ a {
 
 .show {
   position: absolute;
-  justify-content: center;
-  align-items: center;
   background-color: #12a56d;
   color: #ffffff;
   left: 31px;
@@ -193,20 +203,16 @@ a {
 }
 
 .text-works {
-  position: absolute;
   margin-bottom: 2rem;
   font-weight: bolder;
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.801);
   text-shadow: 0px 5px 8px gray;
-  left: 24rem;
+  width: 16.5rem;
 }
 
 .option {
-  margin-bottom: 4rem;
-  position: absolute;
-  left: 34rem;
-  top: 16rem;
+  margin-bottom: 10rem;
 }
 
 a > .option-btn {
@@ -223,9 +229,8 @@ a > .option-btn:hover {
 }
 
 .text {
-  position: absolute;
-  bottom: 15rem;
   font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .inner-dropdwon {
@@ -236,11 +241,10 @@ a > .option-btn:hover {
 }
 
 .green-text {
-  position: absolute;
   color: #12a56d;
-  top: 9.5rem;
   font-size: 1.1rem;
   font-weight: bolder;
+  margin-bottom: 1rem;
 }
 
 .sub-inner {
@@ -287,7 +291,7 @@ a > .option-btn:hover {
   color: #12a56d;
   border: 2px solid #12a56d;
   padding: 3rem 2rem 0.5rem 2rem;
-  position: absolute;
+  position: fixed;
   transform: rotate(270deg);
   top: 18rem;
   left: -4rem;
@@ -298,4 +302,57 @@ a > .option-btn:hover {
   background-color: #12a56d;
   color: #ffffff;
   transition: all 500ms;
+}
+
+.about-us {
+  background-image: url(./assets/images/bg-image-2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 96%;
+  height: 100vh;
+  position: relative;
+  left: 7rem;
+}
+
+.about-us-container {
+  width: 23%;
+  position: absolute;
+  left: 18%;
+  top: 8%;
+}
+
+.text-align-justify {
+  text-align: justify;
+  direction: rtl;
+  line-height: 2rem;
+}
+
+.section-title {
+  direction: rtl;
+  font-family: bold-customize-font;
+  text-shadow: 0px 5px 8px gray;
+  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.link-btn > a {
+  position: absolute;
+  background-color: #12a56d;
+  color: #ffffff;
+  left: 55%;
+  top: 109%;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid #12a56d;
+}
+
+.link-btn > a:hover {
+  color: #12a56d;
+  background-color: white;
+  border: 2px solid #12a56d;
+  transition: 500ms;
 }
